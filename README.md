@@ -1,0 +1,2 @@
+# angularCaseStudy
+Bank management system
