@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/common.service';
+import { CommonService } from '../../services/common.service';
 import { SelectService } from '../../services/select.service';
 import { Country } from '../../services/country';
 import { State } from '../../services/state';
@@ -73,7 +73,7 @@ export class UpdateComponent implements OnInit {
       
       })
   }
-  get f(){
+  get formControls(){
     return this.updateForm.controls;
   }
 

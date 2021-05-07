@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../user';
+import { User } from './user';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -8,10 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  object1={};
   cid1;
   object2;
-  object3=[];
+  
 
 
   constructor(private _http:HttpClient,private router: Router) { }

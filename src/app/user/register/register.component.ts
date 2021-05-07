@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/common.service';
+import { CommonService } from '../../services/common.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Country } from '../../services/country';
 import { SelectService } from '../../services/select.service';
@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
       registerDate: [(new Date()).toISOString().substring(0,10),Validators.required],
       accountType: ['', Validators.required],
       branch: ['', Validators.required],
-      citizen: [{value: '', disabled: true}, Validators.required],
+      citizen: ['', Validators.required],
       deposit: ['', Validators.required],
       prooftype: ['', Validators.required],
       docnumber: ['', [Validators.required, Validators.pattern('^[A-Z0-9]{12}$')]],
@@ -60,11 +60,11 @@ export class RegisterComponent implements OnInit {
 
    
   }
-  get f(){
+  get formControls(){
     return this.registerForm.controls;
   }
 
-  addUser1(formObj){
+  addUser(formObj){
     console.log(formObj);
     this.commonService.createUser(formObj).subscribe((response)=>{
       console.log("user added");
@@ -106,7 +106,7 @@ export class RegisterComponent implements OnInit {
   }
   
   submit(){
-    this.addUser1(this.registerForm.value);
+    this.addUser(this.registerForm.value);
     this.isSubmitted = true;
     if(this.registerForm.invalid){
       return;

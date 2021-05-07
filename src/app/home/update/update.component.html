@@ -9,8 +9,8 @@
         <label for="name">Name</label>
           <input formControlName="name"  id="name" type="text" [(ngModel)]="details.name" class="form-control">
 
-          <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
-            <div *ngIf="f.name.errors.pattern">Name should contain only alphabets and space</div>
+          <div *ngIf="formControls.name.touched && formControls.name.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.name.errors.pattern">Name should contain only alphabets and space</div>
           </div>
       </div>
       
@@ -22,8 +22,8 @@
       <div class="form-group">
         <label for="password">Password</label>
           <input formControlName="password" id="password" type="password" [(ngModel)]="details.password" class="form-control" />
-          <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
-              <div *ngIf="f.password.errors.minlength">Password should be 6 character.</div>
+          <div *ngIf="formControls.password.touched && formControls.password.invalid" class="alert alert-danger">
+              <div *ngIf="formControls.password.errors.minlength">Password should be 6 character.</div>
           </div>
       </div>
       
@@ -67,8 +67,8 @@
       <div class="form-group">
         <label for="email">Email</label>
           <input formControlName="email" id="email" [(ngModel)]="details.email" type="email" class="form-control">
-            <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
-                <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+            <div *ngIf="formControls.email.touched && formControls.email.invalid" class="alert alert-danger">
+                <div *ngIf="formControls.email.errors.email">Please, enter valid email address.</div>
             </div>
       </div>
       

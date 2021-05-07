@@ -9,27 +9,27 @@
     <div class="form-group ">
       <label for="name">Name</label>
         <input formControlName="name" id="name" type="text" placeholder="Name" class="form-control">
-        <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
-          <div *ngIf="f.name.errors.required">Name is required.</div>
-          <div *ngIf="f.name.errors.pattern">Name should contain only alphabets and space</div>
+        <div *ngIf="formControls.name.touched && formControls.name.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.name.errors.required">Name is required.</div>
+          <div *ngIf="formControls.name.errors.pattern">Name should contain only alphabets and space</div>
         </div>
     </div>
     
     <div class="form-group ">
       <label for="username">User Name</label>
         <input formControlName="username" id="username" type="text" placeholder="Username" class="form-control" />
-        <div *ngIf="f.username.touched && f.username.invalid" class="alert alert-danger">
-            <div *ngIf="f.username.errors.required">User Name is required.</div>
-            <div *ngIf="f.username.errors.minlength">UserName should be 4 character.</div>
+        <div *ngIf="formControls.username.touched && formControls.username.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.username.errors.required">User Name is required.</div>
+            <div *ngIf="formControls.username.errors.minlength">UserName should be 4 character.</div>
         </div>
     </div>
     
     <div class="form-group">
       <label for="password">Password</label>
         <input formControlName="password" id="password" type="password" placeholder="Password" class="form-control" />
-        <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
-            <div *ngIf="f.password.errors.required">Password is required.</div>
-            <div *ngIf="f.password.errors.minlength">Password should be 6 character.</div>
+        <div *ngIf="formControls.password.touched && formControls.password.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.password.errors.required">Password is required.</div>
+            <div *ngIf="formControls.password.errors.minlength">Password should be 6 character.</div>
         </div>
     </div>
     
@@ -42,8 +42,8 @@
           <option value="sister">Sister</option>
           <option value="friend">Friend</option>
         </select>  
-        <div *ngIf="f.guardiantype.touched && f.guardiantype.invalid" class="alert alert-danger">
-            <div *ngIf="f.guardiantype.errors.required">Guardian type is required.</div>
+        <div *ngIf="formControls.guardiantype.touched && formControls.guardiantype.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.guardiantype.errors.required">Guardian type is required.</div>
         </div>
     </div>
 
@@ -51,25 +51,25 @@
     <div class="form-group">
       <label for="gname">Guardian Name</label>
         <input formControlName="gname" id="gname" type="text" placeholder="Guardian name" class="form-control" />
-        <div *ngIf="f.gname.touched && f.gname.invalid" class="alert alert-danger">
-            <div *ngIf="f.gname.errors.required">Guardian Name is required.</div>
-            <div *ngIf="f.gname.errors.minlength">Guardian name should be 3 character.</div>
+        <div *ngIf="formControls.gname.touched && formControls.gname.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.gname.errors.required">Guardian Name is required.</div>
+            <div *ngIf="formControls.gname.errors.minlength">Guardian name should be 3 character.</div>
         </div>
     </div>
     
     <div class="form-group ">
       <label for="address">Address</label>
         <textarea formControlName="address" id="address" type="text" placeholder="Full address" class="form-control"></textarea>
-        <div *ngIf="f.address.touched && f.address.invalid" class="alert alert-danger">
-            <div *ngIf="f.address.errors.required">Address is required.</div>
+        <div *ngIf="formControls.address.touched && formControls.address.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.address.errors.required">Address is required.</div>
         </div>
     </div>
 
     <div class="form-group">
       <label for="citizenship">Citizenship</label>
         <input formControlName="citizenship" type="text" placeholder="citizenship" class="form-control" id="citizenship">
-        <div *ngIf="f.citizenship.touched && f.citizenship.invalid" class="alert alert-danger">
-          <div *ngIf="f.citizenship.errors.required">Citizenship is required.</div>
+        <div *ngIf="formControls.citizenship.touched && formControls.citizenship.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.citizenship.errors.required">Citizenship is required.</div>
         </div>
     </div>
 
@@ -94,9 +94,9 @@
     <div class="form-group">
       <label for="email">Email</label>
         <input formControlName="email" id="email" type="email" placeholder="Email" class="form-control">
-          <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
-              <div *ngIf="f.email.errors.required">Email is required.</div>
-              <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+          <div *ngIf="formControls.email.touched && formControls.email.invalid" class="alert alert-danger">
+              <div *ngIf="formControls.email.errors.required">Email is required.</div>
+              <div *ngIf="formControls.email.errors.email">Please, enter valid email address.</div>
           </div>
     </div>
     
@@ -107,8 +107,8 @@
               <option value="female">Female</option>
               <option value="others">Others</option>
             </select>
-          <div *ngIf="f.gender.touched && f.gender.invalid" class="alert alert-danger">
-            <div *ngIf="f.gender.errors.required">Gender is required.</div>
+          <div *ngIf="formControls.gender.touched && formControls.gender.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.gender.errors.required">Gender is required.</div>
           </div>
     </div>
 
@@ -119,8 +119,8 @@
               <option value="married">Married</option>
               <option value="unmarried">Unmarried</option>
             </select>
-          <div *ngIf="f.maritialstatus.touched && f.maritialstatus.invalid" class="alert alert-danger">
-            <div *ngIf="f.maritialstatus.errors.required">Maritial status is required.</div>
+          <div *ngIf="formControls.maritialstatus.touched && formControls.maritialstatus.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.maritialstatus.errors.required">Maritial status is required.</div>
           </div>
     </div>
 
@@ -128,9 +128,9 @@
     <div class="form-group">
       <label for="contact">Contact</label>
         <input formControlName="contact" type="text" placeholder="Phone" class="form-control" id="contact">
-        <div *ngIf="f.contact.touched && f.contact.invalid" class="alert alert-danger">
-          <div *ngIf="f.contact.errors.required">Contact is required.</div>
-          <div *ngIf="f.contact.errors.pattern">Please, enter correct 10 digit number.</div>
+        <div *ngIf="formControls.contact.touched && formControls.contact.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.contact.errors.required">Contact is required.</div>
+          <div *ngIf="formControls.contact.errors.pattern">Please, enter correct 10 digit number.</div>
       </div>
     </div>
     
@@ -139,8 +139,8 @@
       <div class="col-xs-12 col-12 col-md-6 form-group">
         <label for="dob">Date of birth</label>
           <input type="date" formControlName="dob" (change)="onDate($event.target.value)" class="form-control" id="dob" max="{{date | date:'yyyy-MM-dd'}}"/>
-          <div *ngIf="f.dob.touched && f.dob.invalid" class="alert alert-danger">
-            <div *ngIf="f.dob.errors.required">Date of birth is required.</div>
+          <div *ngIf="formControls.dob.touched && formControls.dob.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.dob.errors.required">Date of birth is required.</div>
           </div>
       </div>
     </div>
@@ -149,8 +149,8 @@
       <div class="form-group col-xs-12 col-12 col-md-6">
         <label for="registerDate">Registerd date</label>
           <input formControlName="registerDate" type="date" class="form-control" id="registerDate">
-          <div *ngIf="f.registerDate.touched && f.registerDate.invalid" class="alert alert-danger">
-            <div *ngIf="f.registerDate.errors.required">Register date is required.</div>
+          <div *ngIf="formControls.registerDate.touched && formControls.registerDate.invalid" class="alert alert-danger">
+            <div *ngIf="formControls.registerDate.errors.required">Register date is required.</div>
           </div>
       </div>
     </div>
@@ -162,32 +162,32 @@
           <option value="salary">Salary</option>
         </select>
 
-        <div *ngIf="f.accountType.touched && f.accountType.invalid" class="alert alert-danger">
-          <div *ngIf="f.accountType.errors.required">Account type is required.</div>
+        <div *ngIf="formControls.accountType.touched && formControls.accountType.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.accountType.errors.required">Account type is required.</div>
         </div>
     </div>
 
     <div class="form-group">
       <label for="branch">Branch name</label>
         <input formControlName="branch" type="text" placeholder="Branch name" class="form-control" id="branch">
-        <div *ngIf="f.branch.touched && f.branch.invalid" class="alert alert-danger">
-          <div *ngIf="f.branch.errors.required">Branch is required.</div>
+        <div *ngIf="formControls.branch.touched && formControls.branch.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.branch.errors.required">Branch is required.</div>
         </div>
     </div>
       
     <div class="form-group">
       <label for="citizen">Citizen status</label>
-        <input type="text" [disabled] formControlName="citizen" class="form-control" placeholder="citizen status" id="citizen">
-        <div *ngIf="f.citizen.touched && f.citizen.invalid" class="alert alert-danger">
-          <div *ngIf="f.citizen.errors.required">citizen status is required.</div>
+        <input type="text" formControlName="citizen" class="form-control" placeholder="citizen status" id="citizen">
+        <div *ngIf="formControls.citizen.touched && formControls.citizen.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.citizen.errors.required">citizen status is required.</div>
         </div>
     </div>
       
     <div class="form-group">
       <label for="deposit">Initial Deposit Amount</label>
         <input formControlName="deposit" type="text" placeholder="Deposit amount" class="form-control" id="deposit">
-        <div *ngIf="f.deposit.touched && f.deposit.invalid" class="alert alert-danger">
-          <div *ngIf="f.deposit.errors.required">Deposit is required.</div>
+        <div *ngIf="formControls.deposit.touched && formControls.deposit.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.deposit.errors.required">Deposit is required.</div>
         </div>
     </div>
     
@@ -198,41 +198,41 @@
               <option value="pan" selected>Pan card</option>
           </select>  
           
-        <div *ngIf="f.prooftype.touched && f.prooftype.invalid" class="alert alert-danger">
-          <div *ngIf="f.prooftype.errors.required">prooftype is required.</div>
+        <div *ngIf="formControls.prooftype.touched && formControls.prooftype.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.prooftype.errors.required">prooftype is required.</div>
         </div>
     </div>
      
     <div class="form-group">
       <label for="docnumber">Identification Document Number</label>
         <input formControlName="docnumber" type="text" placeholder="Document number" class="form-control" id="docnumber">
-        <div *ngIf="f.docnumber.touched && f.docnumber.invalid" class="alert alert-danger">
-          <div *ngIf="f.docnumber.errors.required">Document number is required.</div>
-          <div *ngIf="f.docnumber.errors.pattern">Pan number should contain alphanumeric 12 digit</div>
+        <div *ngIf="formControls.docnumber.touched && formControls.docnumber.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.docnumber.errors.required">Document number is required.</div>
+          <div *ngIf="formControls.docnumber.errors.pattern">Pan number should contain alphanumeric 12 digit</div>
         </div>
     </div>
     
     <div class="form-group">
       <label for="refername">Reference account holder name</label>
         <input formControlName="refername" type="text" placeholder="Reference name" class="form-control" id="refername">
-        <div *ngIf="f.refername.touched && f.refername.invalid" class="alert alert-danger">
-          <div *ngIf="f.refername.errors.required">refername number is required.</div>
+        <div *ngIf="formControls.refername.touched && formControls.refername.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.refername.errors.required">refername number is required.</div>
         </div>
     </div>      
     
     <div class="form-group">
       <label for="refernumber">Reference account number</label>
         <input formControlName="refernumber" type="text" placeholder="Reference account number" class="form-control" id="refernumber">
-        <div *ngIf="f.refernumber.touched && f.refernumber.invalid" class="alert alert-danger">
-          <div *ngIf="f.refernumber.errors.required">refernumber number is required.</div>
+        <div *ngIf="formControls.refernumber.touched && formControls.refernumber.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.refernumber.errors.required">refernumber number is required.</div>
         </div>
     </div>
   
     <div class="form-group">
       <label for="referaddress">Reference account holder address</label>
         <input formControlName="referaddress" type="text" placeholder="Address" class="form-control" id="referaddress">
-        <div *ngIf="f.referaddress.touched && f.referaddress.invalid" class="alert alert-danger">
-          <div *ngIf="f.referaddress.errors.required">referaddress number is required.</div>
+        <div *ngIf="formControls.referaddress.touched && formControls.referaddress.invalid" class="alert alert-danger">
+          <div *ngIf="formControls.referaddress.errors.required">referaddress number is required.</div>
         </div>
     </div>
     
