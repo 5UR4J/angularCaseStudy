@@ -70,4 +70,8 @@ describe('LoanComponent', () => {
   //   expect(spy).toHaveBeenCalledWith('/success');
   //   });
 
+  it('Get Form controls from the form',()=>{
+    expect(component.formControls).toBe(component.loanForm.controls);
+  });
+
 });

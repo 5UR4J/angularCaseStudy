@@ -33,12 +33,6 @@ describe('RegisterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('should set countries property with the country returned from the service', () => {
-    spyOn(service, 'getCountries').and.callFake(() => {
-      return [];
-    })
-  });
-
   it('should create form with 24 controls',() =>{
     expect(component.registerForm.contains('name')).toBeTruthy();
     expect(component.registerForm.contains('username')).toBeTruthy();
