@@ -106,4 +106,8 @@ describe('UpdateComponent', () => {
    
     expect(component.states.length).toBe(4);
   });
+
+  it('Get Form controls from the form',()=>{
+    expect(component.formControls).toBe(component.updateForm.controls);
+  });
 });
