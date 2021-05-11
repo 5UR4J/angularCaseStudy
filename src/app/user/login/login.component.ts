@@ -35,6 +35,8 @@ export class LoginComponent implements OnInit {
     }
     this.authService.login(this.loginForm.value);
     this.invalidcredentials=true;
+    this.router.navigateByUrl('/loan');
+
   }
 
 

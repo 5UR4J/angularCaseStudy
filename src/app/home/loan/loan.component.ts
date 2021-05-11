@@ -36,11 +36,11 @@ export class LoanComponent implements OnInit {
 
   get formControls() { return this.loanForm.controls; }
 
-  loadedFeature = 'loan';
+  // loadedFeature = 'loan';
   
-  onNavigate(feature:string){
-    this.loadedFeature = feature;
-  }
+  // onNavigate(feature:string){
+  //   this.loadedFeature = feature;
+  // }
 
   submit(){
     console.log(this.loanForm.value);

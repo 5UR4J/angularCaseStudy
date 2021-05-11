@@ -1,21 +1,19 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 
-import { CommonService } from './common.service';
+import { SelectService } from './select.service';
 
-describe('CommonService', () => {
-  let service: CommonService;
+describe('SelectService', () => {
+  let service: SelectService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+        providers: [SelectService]
     });
-    service = TestBed.inject(CommonService);
+    service = TestBed.inject(SelectService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
- 
 });

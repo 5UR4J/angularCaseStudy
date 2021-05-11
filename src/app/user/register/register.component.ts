@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   date = new Date;
   age;
-
+  
 
   ngOnInit(): void {
     this.countries = this.selectService.getCountries();
@@ -64,12 +64,12 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.controls;
   }
 
-  addUser(formObj){
-    console.log(formObj);
-    this.commonService.createUser(formObj).subscribe((response)=>{
-      console.log("user added");
-    })
-  }
+  // addUser(formObj){
+  //   console.log(formObj);
+  //   this.commonService.createUser(formObj).subscribe((response)=>{
+  //     console.log("user added");
+  //   })
+  // }
 
   onSelect(countryid) {
     this.states = this.selectService.getStates().filter((item) => item.countryid == countryid);
@@ -106,11 +106,15 @@ export class RegisterComponent implements OnInit {
   }
   
   submit(){
-    this.addUser(this.registerForm.value);
+    // this.addUser(this.registerForm.value);
+    
     this.isSubmitted = true;
     if(this.registerForm.invalid){
       return;
     }
+    this.commonService.createUser(this.registerForm.value).subscribe((response)=>{
+      console.log("user added");
+    })
     this.router.navigateByUrl('/login');
   }
 
