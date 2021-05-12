@@ -8,10 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  cid1;
   object2;
-  
-
 
   constructor(private _http:HttpClient,private router: Router) { }
 
@@ -41,10 +38,6 @@ export class AuthService {
 
   public logout(){
     localStorage.removeItem('ACCESS_TOKEN');
-  }
-
-  public cust(cid){
-    this.cid1=cid;
   }
 }
 

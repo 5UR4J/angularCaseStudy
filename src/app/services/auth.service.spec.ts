@@ -20,11 +20,4 @@ describe('AuthService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should assign create cust id',()=>{
-    let value = service.cust('1');
-    let spy = spyOn(service,'cust');
-    expect(value).toBeFalsy();
-  });
- 
-
 });
